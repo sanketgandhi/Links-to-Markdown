@@ -9,12 +9,7 @@ const fs = require("fs");
  */
 function convertToTheMarkdown(linkToConvert) {
   urslMd(linkToConvert).then(urls => {
-    // console.log(urls);
-
     let link = "* " + urls[0] + "\n";
-
-    // console.log(link);
-
     fs.appendFile("link.txt", link, function(err) {
       if (err) throw err;
       console.log("Saved!");
