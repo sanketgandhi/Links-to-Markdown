@@ -1,6 +1,12 @@
 const urslMd = require("urls-md");
 const fs = require("fs");
 
+/**
+ * It will fetch title from the URL and append it
+ * Link will convert in below format -
+ * input -   www.google.com
+ * o/p   -   * [Google](www.google.com)
+ */
 function convertToTheMarkdown(linkToConvert) {
   urslMd(linkToConvert).then(urls => {
     // console.log(urls);
